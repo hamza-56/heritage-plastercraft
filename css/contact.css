@@ -1,0 +1,303 @@
+/* ─── CONTACT SECTION ─── */
+
+.contact-section {
+  padding: 70px 0 80px 0;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ─── LEFT: INFO ─── */
+
+.contact-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.contact-info > p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.contact-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #c6a667;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #c6a667;
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.contact-detail-text h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.contact-detail-text p,
+.contact-detail-text a {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.contact-detail-text a:hover {
+  color: #c6a667;
+}
+
+.contact-social {
+  margin-top: 40px;
+}
+
+.contact-social h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+.contact-social-links {
+  display: flex;
+  gap: 14px;
+}
+
+.contact-social-links a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.2px solid #c6a667;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.contact-social-links a svg {
+  width: 18px;
+  height: 18px;
+  stroke: #c6a667;
+  fill: none;
+  stroke-width: 1.2px;
+  transition: stroke 0.25s ease;
+}
+
+.contact-social-links a:hover {
+  background: #c6a667;
+}
+
+.contact-social-links a:hover svg {
+  stroke: #ffffff;
+}
+
+/* ─── RIGHT: FORM ─── */
+
+.contact-form-wrapper {
+  background: #ffffff;
+  border: 1px solid #e0dedb;
+  padding: 40px 38px;
+}
+
+.contact-form-wrapper h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 28px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.form-group-single {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label,
+.form-group-single label {
+  font-family: "Playfair Display", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select,
+.form-group-single input,
+.form-group-single textarea,
+.form-group-single select {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  background: #faf9f7;
+  color: #333;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus,
+.form-group-single input:focus,
+.form-group-single textarea:focus,
+.form-group-single select:focus {
+  border-color: #c6a667;
+}
+
+.form-group textarea,
+.form-group-single textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-submit {
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  border: 1px solid #0b1a33;
+  background: #0b1a33;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.form-submit:hover {
+  background: transparent;
+  color: #0b1a33;
+}
+
+/* ─── SUCCESS STATE ─── */
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.form-success.visible {
+  display: block;
+}
+
+.form-success svg {
+  width: 52px;
+  height: 52px;
+  stroke: #c6a667;
+  fill: none;
+  stroke-width: 1.5px;
+  margin-bottom: 18px;
+}
+
+.form-success h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-success p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ─── RESPONSIVE ─── */
+
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 45px 0 60px 0;
+  }
+
+  .contact-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .contact-form-wrapper {
+    padding: 30px 24px;
+  }
+}
