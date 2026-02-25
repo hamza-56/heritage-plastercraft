@@ -29,22 +29,22 @@
 (function () {
   const banners = [
     {
-      img: "images/banner1.jpg",
+      img: "images/banner/banner1.jpg",
       title: "CRAFTED THROUGH GENERATIONS",
       subtitle: "Traditional craftsmanship preserved",
     },
     {
-      img: "images/banner2.jpg",
+      img: "images/banner/banner2.jpg",
       title: "RESTORATION WITH INTEGRITY",
       subtitle: "Authentic repairs, true to history",
     },
     {
-      img: "images/banner3.jpg",
+      img: "images/banner/banner3.jpg",
       title: "BESPOKE PLASTERWORK, MADE BY HAND",
       subtitle: "Custom pieces, artisan\u2011made",
     },
     {
-      img: "images/banner4.jpg",
+      img: "images/banner/banner4.jpg",
       title: "EXCELLENCE IN EVERY DETAIL",
       subtitle: "Quality without compromise",
     },
