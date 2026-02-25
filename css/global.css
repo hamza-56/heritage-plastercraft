@@ -134,7 +134,17 @@ nav ul li:hover::after {
   height: 180px;
   position: relative;
   overflow: hidden;
-  background: #e8e0d4;
+  background:
+    repeating-linear-gradient(
+      120deg,
+      rgba(198, 166, 103, 0.03) 0px,
+      transparent 2px,
+      transparent 6px
+    ),
+    radial-gradient(ellipse at 15% 40%, rgba(198, 166, 103, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 60%, rgba(11, 26, 51, 0.07) 0%, transparent 50%),
+    linear-gradient(160deg, #ece4d8 0%, #e8e0d4 40%, #e2d9cc 100%);
+  border-bottom: 1px solid rgba(198, 166, 103, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
