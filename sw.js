@@ -21,9 +21,9 @@ const PRECACHE = [
   "/js/contact.js",
   "/js/portfolio.js",
   "/images/logo.png",
-  "/android-chrome-192x192.png",
-  "/android-chrome-512x512.png",
-  "/favicon.ico",
+  "/images/android-chrome-192x192.png",
+  "/images/android-chrome-512x512.png",
+  "/images/favicon.ico",
   "/manifest.json",
 ];
 
