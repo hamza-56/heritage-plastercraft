@@ -1,11 +1,5 @@
 document.getElementById("footerYear").textContent = new Date().getFullYear();
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () =>
-    navigator.serviceWorker.register("/sw.js"),
-  );
-}
-
 /* ─── Scroll-to-top button ─── */
 (function () {
   const btn = document.createElement("button");
