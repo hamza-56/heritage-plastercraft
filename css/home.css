@@ -101,16 +101,17 @@
 .welcome-column {
   margin-left: 40px;
 }
-.social-column {
+.welcome-image-column {
   margin-right: 40px;
+  display: flex;
+  align-items: center;
 }
 
-.social-box {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  padding: 25px;
-  border-radius: 6px;
+.welcome-image {
   width: 500px;
+  max-width: 100%;
+  border: 2px solid rgba(198, 166, 103, 0.3);
+  display: block;
 }
 
 /* ─── TESTIMONIALS ─── */
@@ -193,10 +194,10 @@
   .welcome-column {
     margin-left: 0;
   }
-  .social-column {
+  .welcome-image-column {
     margin-right: 0;
   }
-  .social-box {
+  .welcome-image {
     width: 100%;
     max-width: 500px;
   }
