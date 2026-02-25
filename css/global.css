@@ -352,6 +352,51 @@ nav ul li:hover::after {
   }
 }
 
+/* ─── SCROLL TO TOP ─── */
+
+.scroll-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid #c6a667;
+  border-radius: 50%;
+  background: #0b1a33;
+  color: #c6a667;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    background 0.25s ease;
+  z-index: 100;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background: #c6a667;
+  color: #0b1a33;
+}
+
+.scroll-top svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 @media (max-width: 480px) {
   nav ul {
     gap: 12px;
