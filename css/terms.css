@@ -1,0 +1,121 @@
+/* ─── TERMS & CONDITIONS ─── */
+
+.terms-section {
+  padding: 70px 0 80px 0;
+}
+
+.terms-content {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.terms-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: 14px;
+}
+
+.terms-content h2:first-child {
+  margin-top: 0;
+}
+
+.terms-content p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.terms-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 14px;
+}
+
+.terms-content > ul > li {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.terms-content > ul > li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: #c6a667;
+  font-size: 1.1rem;
+}
+
+/* Nested list (e.g., liability sub-items) */
+.terms-content ul ul {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 20px;
+}
+
+.terms-content ul ul li {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.terms-content ul ul li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+  color: #c6a667;
+}
+
+/* "Last updated" label (privacy page) */
+.terms-updated {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 24px;
+}
+
+/* Contact block at the bottom */
+.terms-contact {
+  margin-top: 10px;
+  padding: 24px 28px;
+  background: #ffffff;
+  border: 1px solid #e0dedb;
+}
+
+.terms-contact p {
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.terms-contact a {
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.terms-contact a:hover {
+  color: #c6a667;
+}
+
+/* ─── RESPONSIVE ─── */
+
+@media (max-width: 768px) {
+  .terms-section {
+    padding: 45px 0 60px 0;
+  }
+
+  .terms-content h2 {
+    font-size: 1.15rem;
+    margin-top: 30px;
+  }
+}
