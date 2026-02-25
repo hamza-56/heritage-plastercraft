@@ -1,0 +1,42 @@
+{
+  "name": "Heritage Plastercraft",
+  "short_name": "Heritage PC",
+  "description": "Conservation plastering & traditional lime specialists. Sovereign approved — 30-year guarantee.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1a33",
+  "theme_color": "#0b1a33",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
