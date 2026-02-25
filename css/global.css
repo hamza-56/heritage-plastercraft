@@ -193,34 +193,82 @@ nav ul li:hover::after {
   width: 100%;
   background: #000000;
   color: #ffffff;
-  padding: 18px 0;
+  padding: 0;
 }
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 0;
   font-family: "Nunito", sans-serif;
   font-size: 0.9rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
 }
 
 .footer-menu {
   display: flex;
   gap: 20px;
 }
+
 .footer-right {
   display: flex;
   gap: 18px;
 }
 
+.footer-socials {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-socials a {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease;
+}
+
+.footer-socials a svg {
+  width: 11px;
+  height: 11px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 1.4px;
+}
+
+.footer-socials a:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
 .footer-menu a,
-.footer-right a {
+.footer-right a,
+.footer-bottom a {
   color: #ffffff;
   transition: opacity 0.2s ease;
 }
 
 .footer-menu a:hover,
-.footer-right a:hover {
+.footer-right a:hover,
+.footer-bottom a:hover {
   opacity: 0.6;
 }
 
@@ -245,13 +293,16 @@ nav ul li:hover::after {
     height: auto;
     padding: 15px 0;
   }
+
   .logo {
     position: relative;
   }
+
   .social-icons {
     position: relative;
     justify-content: center;
   }
+
   nav ul {
     gap: 16px;
     font-size: 0.8rem;
@@ -271,12 +322,21 @@ nav ul li:hover::after {
     font-size: 0.95rem;
   }
 
-  .footer-inner {
+  .footer-top {
     flex-direction: column;
     gap: 10px;
     text-align: center;
   }
   .footer-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .footer-right {
     flex-wrap: wrap;
     justify-content: center;
   }

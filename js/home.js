@@ -7,9 +7,7 @@
   let currentIndex = 0;
 
   function showTestimonial(index) {
-    testimonials.forEach((t, i) =>
-      t.classList.toggle("active", i === index),
-    );
+    testimonials.forEach((t, i) => t.classList.toggle("active", i === index));
   }
 
   if (prevBtn && nextBtn && testimonials.length > 0) {
@@ -66,8 +64,7 @@
     titleEl.textContent = banners[index].title;
     subtitleEl.textContent = banners[index].subtitle;
 
-    leftSide.src =
-      banners[(index - 1 + banners.length) % banners.length].img;
+    leftSide.src = banners[(index - 1 + banners.length) % banners.length].img;
     rightSide.src = banners[(index + 1) % banners.length].img;
   }
 
