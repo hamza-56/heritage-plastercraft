@@ -23,6 +23,7 @@
   width: 1200px;
   position: relative;
   z-index: 5;
+  overflow: hidden;
 }
 
 .banner-center img {
@@ -39,6 +40,38 @@
   transform: translateX(-50%);
   text-align: center;
   color: white;
+}
+
+/* Slide + fade keyframes */
+@keyframes slide-out-left {
+  to { transform: translateX(-50px); opacity: 0; }
+}
+@keyframes slide-out-right {
+  to { transform: translateX(50px); opacity: 0; }
+}
+@keyframes slide-in-from-right {
+  from { transform: translateX(50px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes slide-in-from-left {
+  from { transform: translateX(-50px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+/* Text variants (keep centered via left/translateX) */
+@keyframes text-out-left {
+  to { transform: translateX(-50%) translateX(-30px); opacity: 0; }
+}
+@keyframes text-out-right {
+  to { transform: translateX(-50%) translateX(30px); opacity: 0; }
+}
+@keyframes text-in-from-right {
+  from { transform: translateX(-50%) translateX(30px); opacity: 0; }
+  to   { transform: translateX(-50%); opacity: 1; }
+}
+@keyframes text-in-from-left {
+  from { transform: translateX(-50%) translateX(-30px); opacity: 0; }
+  to   { transform: translateX(-50%); opacity: 1; }
 }
 
 .banner-text h2 {
@@ -60,6 +93,11 @@
   overflow: hidden;
   filter: grayscale(100%) blur(3px);
   opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+
+.banner-side.fade-out {
+  opacity: 0;
 }
 
 .banner-side img {

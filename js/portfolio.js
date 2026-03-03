@@ -87,12 +87,12 @@
 
 (function () {
   var lightbox = document.getElementById("lightbox");
-  var lbImage = document.getElementById("lightboxImage");
-  var lbVideo = document.getElementById("lightboxVideo");
-  var lbTitle = document.getElementById("lightboxTitle");
-  var lbCaption = document.getElementById("lightboxCaption");
-  var lbCurrent = document.getElementById("lightboxCurrent");
-  var lbTotal = document.getElementById("lightboxTotal");
+  var lbImage = document.getElementById("lightbox-image");
+  var lbVideo = document.getElementById("lightbox-video");
+  var lbTitle = document.getElementById("lightbox-title");
+  var lbCaption = document.getElementById("lightbox-caption");
+  var lbCurrent = document.getElementById("lightbox-current");
+  var lbTotal = document.getElementById("lightbox-total");
   var closeBtn = document.querySelector(".lightbox-close");
   var prevBtn = document.querySelector(".lightbox-prev");
   var nextBtn = document.querySelector(".lightbox-next");

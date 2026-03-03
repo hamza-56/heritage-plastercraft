@@ -1,4 +1,4 @@
-document.getElementById("footerYear").textContent = new Date().getFullYear();
+document.getElementById("footer-year").textContent = new Date().getFullYear();
 
 /* ─── Scroll-to-top button ─── */
 (function () {

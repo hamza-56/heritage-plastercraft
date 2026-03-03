@@ -51,31 +51,69 @@
   ];
 
   let index = 0;
+  let animating = false;
+  const ANIM_MS = 300;
+  const TIMING = ANIM_MS + "ms ease";
 
-  const mainImg = document.getElementById("mainBannerImage");
-  const titleEl = document.getElementById("bannerTitle");
-  const subtitleEl = document.getElementById("bannerSubtitle");
+  const mainImg = document.getElementById("main-banner-image");
+  const titleEl = document.getElementById("banner-title");
+  const subtitleEl = document.getElementById("banner-subtitle");
+  const bannerText = document.querySelector(".banner-text");
 
-  const leftSide = document.querySelector(".banner-left img");
-  const rightSide = document.querySelector(".banner-right img");
+  const leftSide = document.querySelector(".banner-left");
+  const rightSide = document.querySelector(".banner-right");
+  const leftImg = leftSide.querySelector("img");
+  const rightImg = rightSide.querySelector("img");
 
   function updateBanners() {
     mainImg.src = banners[index].img;
     titleEl.textContent = banners[index].title;
     subtitleEl.textContent = banners[index].subtitle;
 
-    leftSide.src = banners[(index - 1 + banners.length) % banners.length].img;
-    rightSide.src = banners[(index + 1) % banners.length].img;
+    leftImg.src = banners[(index - 1 + banners.length) % banners.length].img;
+    rightImg.src = banners[(index + 1) % banners.length].img;
   }
 
-  document.querySelector(".banner-prev").addEventListener("click", () => {
-    index = (index - 1 + banners.length) % banners.length;
-    updateBanners();
+  function animateTo(newIndex, direction) {
+    if (animating) return;
+    animating = true;
+
+    var imgOut = direction > 0 ? "slide-out-left" : "slide-out-right";
+    var imgIn = direction > 0 ? "slide-in-from-right" : "slide-in-from-left";
+    var txtOut = direction > 0 ? "text-out-left" : "text-out-right";
+    var txtIn = direction > 0 ? "text-in-from-right" : "text-in-from-left";
+
+    // Slide out + fade sides
+    mainImg.style.animation = imgOut + " " + TIMING + " forwards";
+    bannerText.style.animation = txtOut + " " + TIMING + " forwards";
+    leftSide.classList.add("fade-out");
+    rightSide.classList.add("fade-out");
+
+    setTimeout(function () {
+      // Swap content
+      index = newIndex;
+      updateBanners();
+
+      // Slide in
+      mainImg.style.animation = imgIn + " " + TIMING;
+      bannerText.style.animation = txtIn + " " + TIMING;
+      leftSide.classList.remove("fade-out");
+      rightSide.classList.remove("fade-out");
+
+      setTimeout(function () {
+        mainImg.style.animation = "";
+        bannerText.style.animation = "";
+        animating = false;
+      }, ANIM_MS);
+    }, ANIM_MS);
+  }
+
+  document.querySelector(".banner-prev").addEventListener("click", function () {
+    animateTo((index - 1 + banners.length) % banners.length, -1);
   });
 
-  document.querySelector(".banner-next").addEventListener("click", () => {
-    index = (index + 1) % banners.length;
-    updateBanners();
+  document.querySelector(".banner-next").addEventListener("click", function () {
+    animateTo((index + 1) % banners.length, 1);
   });
 
   updateBanners();

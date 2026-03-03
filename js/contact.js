@@ -1,8 +1,8 @@
 /* ─── CONTACT FORM ─── */
 
 (function () {
-  const form = document.getElementById("contactForm");
-  const successMsg = document.getElementById("formSuccess");
+  const form = document.getElementById("contact-form");
+  const successMsg = document.getElementById("form-success");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
