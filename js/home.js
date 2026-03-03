@@ -5,21 +5,43 @@
   const prevBtn = document.querySelector(".testimonial-prev");
   const nextBtn = document.querySelector(".testimonial-next");
   let currentIndex = 0;
+  let animating = false;
+  const ANIM_MS = 350;
 
-  function showTestimonial(index) {
-    testimonials.forEach((t, i) => t.classList.toggle("active", i === index));
+  function animateTestimonial(newIndex, direction) {
+    if (animating || newIndex === currentIndex) return;
+    animating = true;
+
+    var current = testimonials[currentIndex];
+    var next = testimonials[newIndex];
+
+    var outClass = direction > 0 ? "slide-out-left" : "slide-out-right";
+    var inClass = direction > 0 ? "slide-in-left" : "slide-in-right";
+
+    current.classList.add(outClass);
+
+    setTimeout(function () {
+      current.classList.remove("active", outClass);
+      next.classList.add("active", inClass);
+
+      setTimeout(function () {
+        next.classList.remove(inClass);
+        currentIndex = newIndex;
+        animating = false;
+      }, ANIM_MS);
+    }, ANIM_MS);
   }
 
   if (prevBtn && nextBtn && testimonials.length > 0) {
-    prevBtn.addEventListener("click", () => {
-      currentIndex =
+    prevBtn.addEventListener("click", function () {
+      var newIndex =
         (currentIndex - 1 + testimonials.length) % testimonials.length;
-      showTestimonial(currentIndex);
+      animateTestimonial(newIndex, -1);
     });
 
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      showTestimonial(currentIndex);
+    nextBtn.addEventListener("click", function () {
+      var newIndex = (currentIndex + 1) % testimonials.length;
+      animateTestimonial(newIndex, 1);
     });
   }
 })();

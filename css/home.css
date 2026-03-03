@@ -176,6 +176,8 @@
   gap: 25px;
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .testimonial-arrow {
@@ -202,14 +204,49 @@
 
 .testimonial {
   max-width: 650px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
-  display: none;
-  transition: opacity 0.5s ease;
+  pointer-events: none;
 }
 
 .testimonial.active {
-  display: block;
+  position: relative;
+  left: auto;
+  transform: none;
   opacity: 1;
+  pointer-events: auto;
+}
+
+.testimonial.slide-out-left {
+  animation: testimonial-out-left 0.35s ease forwards;
+}
+.testimonial.slide-out-right {
+  animation: testimonial-out-right 0.35s ease forwards;
+}
+.testimonial.slide-in-left {
+  animation: testimonial-in-left 0.35s ease forwards;
+}
+.testimonial.slide-in-right {
+  animation: testimonial-in-right 0.35s ease forwards;
+}
+
+@keyframes testimonial-out-left {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-40px); }
+}
+@keyframes testimonial-out-right {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(40px); }
+}
+@keyframes testimonial-in-left {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes testimonial-in-right {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 .testimonial-text {
