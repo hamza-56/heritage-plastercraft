@@ -355,6 +355,36 @@ nav ul li:hover::after {
   }
 }
 
+/* ─── WHATSAPP FAB ─── */
+
+.whatsapp-fab {
+  position: fixed;
+  bottom: 90px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  z-index: 100;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-fab svg {
+  width: 28px;
+  height: 28px;
+}
+
 /* ─── SCROLL TO TOP ─── */
 
 .scroll-top {
